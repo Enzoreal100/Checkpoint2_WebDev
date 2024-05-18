@@ -1,3 +1,12 @@
-/* *{
-    background: black;
-} */
+section {
+    margin: 12px;
+    padding: 12px;
+    border: solid 2px black;
+}
+input {
+    margin: 2px;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+}
