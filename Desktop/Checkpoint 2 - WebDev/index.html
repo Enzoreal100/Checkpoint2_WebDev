@@ -14,14 +14,13 @@
         <h1>EX1 - Calculadora</h1>
         <input label='Digite o primeiro número' type="text" id="n1"> <br>
         <input label='Digite o segundo número'type="text" id="n2"> <br>
-        <button onclick="soma()">+</button>
-        <button onclick="subtrai()"> - </button> 
-        <button onclick="multiplica()">*</button> 
-        <button onclick="divid()">/</button>
+        <button onclick="selecionaOperacao('soma')">+</button>
+        <button onclick="selecionaOperacao('subtrai')"> - </button> 
+        <button onclick="selecionaOperacao('multiplica')">*</button> 
+        <button onclick="selecionaOperacao('divid')">/</button>
         <button onclick="calcula()">Calcular</button>
-        <div id="resCalculadora">
-            <p>O resultado vem aqui...</p>
-        </div>
+        <p id="resCalculadora">O resultado vem aqui...</p>
+        <button onclick="continuar()">Continuar</button>
     </section>
 
     <!--Ex2-->

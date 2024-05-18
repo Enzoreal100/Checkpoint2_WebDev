@@ -1,65 +1,38 @@
 //Ex1
-let calculo = 0;
-let n1 = document.getElementById("n1");
-let n2 = document.getElementById("n2");
-resCalculadora = document.getElementById("resCalculadora");
+let operacao = '';
 
-function soma(a, b) {
-    calculo = 1;
-    return parseFloat(a.value) + parseFloat(b.value);
-}
-
-function subtrai(a, b) {
-    calculo = 2;
-    return parseFloat(a.value) - parseFloat(b.value);
-}
-
-function multiplica(a, b) {
-    calculo = 3;
-    return parseFloat(a.value) * parseFloat(b.value);
-}
-
-function divid(a, b) {
-    if (b === 0) {
-        calculo = 4;
-        return "Erro: Divisão por zero!";
-    }
-    calculo = 4;
-    return parseFloat(a.value) / parseFloat(b.value);
+function selecionaOperacao(op) {
+    operacao = op;
 }
 
 function calcula() {
-    let continuar = true;
+    let n1 = Number(document.getElementById('n1').value);
+    let n2 = Number(document.getElementById('n2').value);
+    let resultado;
 
-    while (continuar){
-        let n1 = document.getElementById("n1");
-        let n2 = document.getElementById("n2");
-
-        switch (calculo) {
-            case 1:
-                resCalculadora.innerHTML = `Resultado =  ${soma(n1, n2)}`;
-                break;
-    
-            case 2:
-                resCalculadora.innerHTML = `Resultado = ${subtrai(n1, n2)}`;
-                break;
-    
-            case 3:
-                resCalculadora.innerHTML = `Resultado = ${multiplica(n1, n2)}`;
-                break;
-    
-            case 4:
-                resCalculadora.innerHTML = `Resultado = ${divid(n1, n2)}`;
-                break;
-    
-            default:
-                resCalculadora.innerHTML = "Operação Inválida";
-        }
-        continuar = confirm("Deseja realizar outro cálculo?");
+    switch (operacao) {
+        case 'soma':
+            resultado = n1 + n2;
+            break;
+        case 'subtrai':
+            resultado = n1 - n2;
+            break;
+        case 'multiplica':
+            resultado = n1 * n2;
+            break;
+        case 'divid':
+            if (n2 != 0) {
+                resultado = n1 / n2;
+            } else {
+                resultado = 'Erro: Divisão por zero não é permitida';
+            }
+            break;
+        default:
+            resultado = 'Operação não selecionada';
     }
-    
-}
 
+    document.getElementById('resCalculadora').innerHTML = `O resultado é: ${resultado}`;
+}
 // setTimeout(() => {
 //     do {
 //         continuar = prompt("Deseja realizar outro cálculo? (Sim/Não)").toLowerCase();
