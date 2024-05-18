@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Ex1-->
+    <section id="ex1">
+        <h1>EX1 - Calculadora</h1>
+        <input label='Digite o primeiro número' type="text" id="n1"> <br>
+        <input label='Digite o segundo número'type="text" id="n2"> <br>
+        <button onclick="soma()">+</button>
+        <button onclick="subtrai()"> - </button> 
+        <button onclick="multiplica()">*</button> 
+        <button onclick="divid()">/</button>
+        <button onclick="calcula()">Calcular</button>
+        <div id="resCalculadora">
+            <p>O resultado vem aqui...</p>
+        </div>
+    </section>
+
+    <!--Ex2-->
+    <section>
+        <h1>EX2 - Salário Líquido</h1>
+        <p>coloque seu salário bruto aqui: </p>
+        <input label='Digite o primeiro número' type="text" id="sb"> <br>
+        <button onclick="calculaSB()">Calcular Impostos</button>
+        <div id="resSB">
+            <p>O resultado vem aqui...</p>
+        </div>
+    </section>    
+    <script src="scripts.js"></script>
+</body>
+
+</html>
